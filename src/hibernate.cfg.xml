@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/notesdefrais</property>
+        <!--  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/notesdefrais?zeroDateTimeBehavior=convertToNull</property> -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+        <property name="hibernate.connection.autocommit">true</property>
+        <mapping resource="mapping/Salarie.hbm.xml"/>
+        <mapping resource="mapping/Admin.hbm.xml"/>
+        <!-- <mapping resource="mapping/Client.hbm.xml"/>-->
+        <mapping resource="mapping/Client.hbm.xml"/>
+        <!--<mapping resource="mapping/Admin.hbm.xml"/>-->
+        <!--<mapping resource="mapping/Salarie.hbm.xml"/>-->
+        <mapping resource="mapping/Kilometrique.hbm.xml"/>
+    
+        <mapping resource="mapping/Restaurant.hbm.xml"/>
+        <mapping resource="mapping/Taxi.hbm.xml"/>
+   
+        <mapping resource="mapping/Demandeavance.hbm.xml"/>
+        <mapping resource="mapping/Hebergement.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

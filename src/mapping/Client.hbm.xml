@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 janv. 2018 23:23:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.Client" table="client" catalog="notesdefrais">
+        <id name="idClient" type="java.lang.Integer">
+            <column name="id_societe" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="nomClient" type="string">
+            <column name="nom_societe" length="50" not-null="true" />
+        </property>
+        <property name="AdresseClient" type="string">
+            <column name="adresse_societe" length="50" not-null="true" />
+        </property>
+        <property name="EmailClient" type="string">
+            <column name="email_societe" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 janv. 2018 23:23:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.Kilometrique" table="kilometrique" catalog="notesdefrais">
+        <id name="idKm" type="java.lang.Integer">
+            <column name="id_km" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="dateKm" type="date">
+            <column name="date_km" length="10" not-null="true" />
+        </property>
+        <property name="departKm" type="string">
+            <column name="depart_km" length="50" not-null="true" />
+        </property>
+        <property name="arriveeKm" type="string">
+            <column name="arrivee_km" length="50" not-null="true" />
+        </property>
+        <property name="distanceKm" type="int">
+            <column name="distance_km" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

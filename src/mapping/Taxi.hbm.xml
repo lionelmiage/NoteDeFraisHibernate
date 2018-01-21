@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 janv. 2018 23:23:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.Taxi" table="taxi" catalog="notesdefrais" optimistic-lock="version">
+        <id name="idTaxi" type="java.lang.Integer">
+            <column name="id_taxi" />
+            <generator class="identity" />
+        </id>
+        <property name="departTaxi" type="string">
+            <column name="depart_taxi" length="50" not-null="true" />
+        </property>
+        <property name="arriveeTaxi" type="string">
+            <column name="arrivee_taxi" length="50" not-null="true" />
+        </property>
+        <property name="montantTaxi" type="double">
+            <column name="montant_taxi" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nomSociete" type="string">
+            <column name="nom_societe" length="50" not-null="true" />
+        </property>
+        <property name="idClient" type="int">
+            <column name="id_client" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

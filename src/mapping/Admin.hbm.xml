@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 janv. 2018 23:23:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.Admin" table="admin" catalog="notesdefrais">
+        <id name="idAdmin" type="java.lang.Integer">
+            <column name="id_admin" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="emailAdmin" type="string">
+            <column name="email_admin" length="50" not-null="true" />
+        </property>
+        <property name="mdpAdmin" type="string">
+            <column name="mdp_admin" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
