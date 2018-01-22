@@ -46,6 +46,11 @@ public class AjouterHebergementController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         // valeur officielle
+        //identifiant.setText(String.valueOf(Salarie.idSalarie).toString());
+
+        //valeur de l'id pour les test
+      identifiant.setText(String.valueOf(1).toString());
         // TODO
     }    
 

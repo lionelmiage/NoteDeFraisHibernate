@@ -68,7 +68,11 @@ public class AjouterDejeunerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       // identifiant.setText(String.valueOf(Salarie.idSalarie).toString());
+       // valeur officielle
+        //identifiant.setText(String.valueOf(Salarie.idSalarie).toString());
+
+        //valeur de l'id pour les test
+      identifiant.setText(String.valueOf(1).toString());
        lesSocietes();
     }
 
