@@ -7,28 +7,34 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<?import javafx.collections.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="controller.AjouterHebergementController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterHebergementController">
    <children>
     <Label layoutX="168.0" layoutY="37.0" text="AJOUTER UNE NOTE D'HEBERGEMENT">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="105.0" text="Distance" />
-      <Label layoutX="14.0" layoutY="150.0" text="Temps de trajet" />
-      <Label layoutX="19.0" layoutY="192.0" prefHeight="17.0" prefWidth="133.0" text="Montant frais annexes" />
-      <Label layoutX="19.0" layoutY="285.0" text="Nom client/entreprise" />
-      <Label layoutX="19.0" layoutY="241.0" text="Autres frais" />
-      <TextField fx:id="texteDistance" layoutX="176.0" layoutY="100.0" prefHeight="27.0" prefWidth="391.0" promptText="distance" />
-      <TextField fx:id="texteMontant" layoutX="176.0" layoutY="187.0" prefHeight="27.0" prefWidth="391.0" promptText="montant" />
-      <TextField fx:id="texteAutresFrais" layoutX="176.0" layoutY="236.0" prefHeight="27.0" prefWidth="391.0" promptText="autres frais" />
-      <Button fx:id="boutonAjouterNote" layoutX="19.0" layoutY="359.0" mnemonicParsing="false" onAction="#AjouterNote" prefHeight="27.0" prefWidth="539.0" text="Ajouter la note" />
-      <TextField fx:id="texteClient" layoutX="176.0" layoutY="280.0" prefHeight="27.0" prefWidth="391.0" promptText="nom client/entreprise" />
+      <Label layoutX="23.0" layoutY="95.0" text="Cause" />
+      <Label layoutX="19.0" layoutY="137.0" prefHeight="17.0" prefWidth="71.0" text="Montant" />
+      <Label layoutX="14.0" layoutY="180.0" text="Autres frais" />
+      <TextField fx:id="texteMontant" layoutX="130.0" layoutY="132.0" prefHeight="27.0" prefWidth="441.0" promptText="montant" />
+      <TextField fx:id="texteAutresFrais" layoutX="130.0" layoutY="175.0" prefHeight="27.0" prefWidth="441.0" promptText="autres frais" />
+      <Button fx:id="boutonAjouterNote" layoutX="133.0" layoutY="320.0" mnemonicParsing="false" onAction="#ajouterNote" prefHeight="27.0" prefWidth="441.0" text="Ajouter la note" />
       <Label fx:id="login" layoutX="19.0" layoutY="31.0" />
-      <Label layoutX="28.0" layoutY="326.0" text="Date" />
-      <DatePicker fx:id="date" layoutX="176.0" layoutY="321.0" promptText="date" />
-      <ChoiceBox fx:id="tempsTrajet" layoutX="176.0" layoutY="145.0" prefHeight="27.0" prefWidth="391.0" />
+      <Label layoutX="18.0" layoutY="245.0" text="Date" />
+      <DatePicker fx:id="date" layoutX="130.0" layoutY="232.0" promptText="date" />
+      <ChoiceBox fx:id="selectionCauseHerb" layoutX="130.0" layoutY="90.0" prefHeight="27.0" prefWidth="149.0" >
+        <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Distance > 50 km" />
+                    <String fx:value="Temps de trajet > 1h30" />
+                    
+                </FXCollections>
+            </items>
+      </ChoiceBox>
       <Label layoutX="11.0" layoutY="23.0" text="ID :" />
       <Label fx:id="identifiant" layoutX="38.0" layoutY="23.0" prefHeight="17.0" prefWidth="120.0" style="-fx-background-color: #d1f1df#d1f1df;" />
    </children>

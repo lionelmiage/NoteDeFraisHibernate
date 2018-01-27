@@ -8,17 +8,23 @@
             <column name="id_heberg" />
             <generator class="identity" />
         </id>
-        <property name="distanceHerberg" type="string">
-            <column name="distance_herberg" length="50" not-null="true" />
+        <property name="cause" type="string">
+            <column name="cause_herberg" length="50" not-null="true" />
         </property>
-        <property name="tempsHeberg" type="string">
+          <property name="montant" type="double">
+            <column name="montant_heberg" precision="22" scale="0" not-null="true" />
+        </property>
+        <!--<property name="tempsHeberg" type="string">
             <column name="temps_heberg" length="50" not-null="true" />
-        </property>
+        </property>-->
         <property name="montantAnnexesHeberg" type="double">
             <column name="montantAnnexes_heberg" precision="22" scale="0" not-null="true" />
         </property>
         <property name="dateHeberg" type="date">
             <column name="date_heberg" length="10" not-null="true" />
+        </property>
+         <property name="idClient" type="java.lang.Integer">
+            <column name="id_salarie" length="11" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

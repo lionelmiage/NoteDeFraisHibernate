@@ -74,6 +74,7 @@ public class AjouterDejeunerController implements Initializable {
         //valeur de l'id pour les test
       identifiant.setText(String.valueOf(1).toString());
        lesSocietes();
+       
     }
 
     @FXML
