@@ -10,7 +10,7 @@
 <?import java.lang.String?>
 <?import javafx.collections.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterHebergementController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #648FD8;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterHebergementController">
    <children>
     <Label layoutX="168.0" layoutY="37.0" text="AJOUTER UNE NOTE D'HEBERGEMENT">
          <font>

@@ -23,7 +23,7 @@
         <property name="dateHeberg" type="date">
             <column name="date_heberg" length="10" not-null="true" />
         </property>
-         <property name="idClient" type="java.lang.Integer">
+         <property name="idSalarie" type="java.lang.Integer">
             <column name="id_salarie" length="11" not-null="true" />
         </property>
     </class>

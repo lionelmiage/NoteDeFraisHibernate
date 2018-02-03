@@ -33,15 +33,11 @@ import javafx.scene.control.TextField;
 public class AjouterHebergementController implements Initializable {
 
     @FXML
-    private TextField texteDistance;
-    @FXML
     private TextField texteMontant;
     @FXML
     private TextField texteAutresFrais;
     @FXML
     private Button boutonAjouterNote;
-    @FXML
-    private TextField texteClient;
     @FXML
     private Label login;
     @FXML

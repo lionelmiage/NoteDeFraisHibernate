@@ -8,6 +8,9 @@
             <column name="iddemande" />
             <generator class="identity" />
         </id>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
         <property name="type" type="string">
             <column name="type" length="11" not-null="true" />
         </property>

@@ -3,24 +3,50 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="562.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="controller.AjouterClientController">
+<AnchorPane id="AnchorPane" prefHeight="271.0" prefWidth="562.0" style="-fx-background-color: #648FD8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterClientController">
      <children>
-    <Label layoutX="168.0" layoutY="37.0" text="CREER UN NOUVEAU CLIENT">
+    <Label layoutX="152.0" layoutY="22.0" text="CREER UN NOUVEAU CLIENT" textAlignment="CENTER">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="105.0" prefHeight="17.0" prefWidth="117.0" text="Nom de la Société" />
-      <Label layoutX="14.0" layoutY="150.0" text="Adresse" />
-      <Label layoutX="19.0" layoutY="192.0" prefHeight="17.0" prefWidth="133.0" text="Email" />
-      <TextField fx:id="texteNom" layoutX="152.0" layoutY="100.0" prefHeight="27.0" prefWidth="391.0" promptText="Nom" />
-      <TextField fx:id="texteEmail" layoutX="152.0" layoutY="187.0" prefHeight="27.0" prefWidth="391.0" promptText="Email" />
-      <Button fx:id="boutonAjouterClient" layoutX="95.0" layoutY="274.0" mnemonicParsing="false" onAction="#creerClient" prefHeight="27.0" prefWidth="448.0" text="Ajouter la note" />
+      <Label layoutX="16.0" layoutY="105.0" prefHeight="17.0" prefWidth="117.0" text="Nom de la Société">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label layoutX="14.0" layoutY="150.0" text="Adresse">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label layoutX="19.0" layoutY="192.0" prefHeight="17.0" prefWidth="133.0" text="Email">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <TextField fx:id="texteNom" layoutX="152.0" layoutY="100.0" prefHeight="27.0" prefWidth="109.0" promptText="Nom">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
+      <TextField fx:id="texteEmail" layoutX="152.0" layoutY="187.0" prefHeight="27.0" prefWidth="170.0" promptText="Email">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
+      <Button fx:id="boutonAjouterClient" layoutX="359.0" layoutY="105.0" mnemonicParsing="false" onAction="#creerClient" prefHeight="103.0" prefWidth="142.0" text="Ajouter la note">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
       <Label fx:id="login" layoutX="19.0" layoutY="31.0" />
     
-      <TextField fx:id="texteAdresse" layoutX="152.0" layoutY="145.0" prefHeight="27.0" prefWidth="391.0" promptText="Prénom" />
+      <TextField fx:id="texteAdresse" layoutX="152.0" layoutY="145.0" prefHeight="27.0" prefWidth="109.0" promptText="Prénom">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
    </children>
+   <effect>
+      <Reflection />
+   </effect>
 </AnchorPane>

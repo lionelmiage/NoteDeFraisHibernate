@@ -20,5 +20,11 @@
         <property name="distanceKm" type="int">
             <column name="distance_km" not-null="true" />
         </property>
+         <property name="puissance" type="int">
+            <column name="puissance" length="11" not-null="true" />
+        </property>
+        <property name="idSalarie" type="int">
+            <column name="id_salarie" not-null="true" />
+        </property>
     </class>
 </hibernate-mapping>

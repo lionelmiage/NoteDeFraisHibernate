@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="600.0" style="-fx-background-color: #648FD8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="controller.GestionClientController">
+    <children>
+      <Label fx:id="titreFenetre" layoutX="243.0" layoutY="7.0" prefHeight="38.0" prefWidth="331.0" text="GESTION DES CLIENTS" textAlignment="CENTER">
+         <font>
+            <Font size="31.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label layoutX="24.0" layoutY="17.0" text="ID :" />
+      <Label fx:id="identifiant" layoutX="51.0" layoutY="17.0" prefHeight="17.0" prefWidth="146.0" style="-fx-background-color: #d1f1df#d1f1df#d1f1df#d1f1df;">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label fx:id="texteNom" layoutX="319.0" layoutY="296.0" prefHeight="17.0" prefWidth="181.0" style="-fx-background-color: #d1f1df#d1f1df;">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label layoutX="43.0" layoutY="75.0" prefHeight="38.0" prefWidth="82.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="204.0" layoutY="298.0" prefHeight="17.0" prefWidth="98.0" text="Modifier le nom">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <TableView fx:id="tableau" layoutX="14.0" layoutY="99.0" prefHeight="193.0" prefWidth="570.0">
+         <columns>
+            <TableColumn fx:id="colonneIdNote" prefWidth="112.0" text="id note" />
+            <TableColumn fx:id="colonneDate" prefWidth="142.0" text="Nom" />
+            <TableColumn fx:id="colonneMontant" prefWidth="197.0" text="Adresse" />
+            <TableColumn fx:id="colonneEmail" prefWidth="118.0" text="Email" />
+         </columns>
+      </TableView>
+      <Label layoutX="204.0" layoutY="330.0" prefHeight="17.0" prefWidth="108.0" text="Modifier l'adresse">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label fx:id="texteModifierAdresse" layoutX="319.0" layoutY="330.0" prefHeight="17.0" prefWidth="181.0" style="-fx-background-color: #d1f1df#d1f1df;">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label layoutX="204.0" layoutY="363.0" prefHeight="17.0" prefWidth="108.0" text="Modifier l'Email">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label fx:id="texteModifierEmail" layoutX="319.0" layoutY="363.0" prefHeight="17.0" prefWidth="181.0" style="-fx-background-color: #d1f1df#d1f1df;">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Button fx:id="boutonCreerClient" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" onAction="#nouveauClient" prefHeight="27.0" prefWidth="130.0" text="NOUVEAU CLIENT">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="boutonMAJ" layoutX="14.0" layoutY="301.0" mnemonicParsing="false" onAction="#mettreAJour" prefHeight="25.0" prefWidth="130.0" text="METTRE A JOUR">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="boutonSupprimer" layoutX="16.0" layoutY="368.0" mnemonicParsing="false" onAction="#supprimerClient" prefHeight="25.0" prefWidth="130.0" text="SUPPRIMER">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label layoutX="16.0" layoutY="67.0" prefHeight="17.0" prefWidth="108.0" text="Rechercher un client" />
+      <TextField fx:id="rechercheClient" layoutX="144.0" layoutY="63.0" />
+   </children>
+   <effect>
+      <Reflection />
+   </effect>
+</AnchorPane>

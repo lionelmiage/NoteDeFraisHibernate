@@ -28,15 +28,27 @@ public class Restaurant  implements java.io.Serializable {
      private double montantRest;
      //private int idClient;
      private String nomClient;
+     private Integer idSalarie;
+     
 
     public Restaurant() {
     }
 
-    public Restaurant(Date dateRest, double montantRest, int idClient, String nomSociete) {
+    public Restaurant(Date dateRest, double montantRest, int idClient, String nomSociete,Integer idSalarie) {
        this.dateRest = dateRest;
        this.montantRest = montantRest;
        //this.idClient = idClient;
        this.nomClient = nomSociete;
+       this.idSalarie = this.idSalarie;
+    }
+
+   
+    public Integer getIdSalarie() {
+        return idSalarie;
+    }
+
+    public void setIdSalarie(Integer idSalarie) {
+        this.idSalarie = idSalarie;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -90,6 +102,15 @@ public class Restaurant  implements java.io.Serializable {
     public void setNomSociete(String nomSociete) {
         this.nomClient = nomSociete;
     }
+     @Column(name = "id_salarie", nullable = false)
+     public String getNomClient() {
+        return nomClient;
+    }
+
+    public void setNomClient(String nomClient) {
+        this.nomClient = nomClient;
+    }
+
 
 
 

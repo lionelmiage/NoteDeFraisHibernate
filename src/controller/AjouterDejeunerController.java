@@ -6,14 +6,12 @@
 package controller;
 
 import dao.DejeunerDAO;
-import dao.GestionNoteFraisDAO;
+import dao.SalarieDao;
 import dao.connexion.Connection;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -29,14 +27,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javax.persistence.Parameter;
 import mapping.Client;
-import static mapping.Client.nomClient;
-import mapping.Restaurant;
-import mapping.Salarie;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import vues.TransitionView;
 
@@ -51,8 +43,7 @@ public class AjouterDejeunerController implements Initializable {
     private TextField textMontant;
     @FXML
     private Label identifiant;
-   
-    
+
     @FXML
     private Button boutonAjouterNote;
     @FXML
@@ -68,44 +59,44 @@ public class AjouterDejeunerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       // valeur officielle
+        // valeur officielle
         //identifiant.setText(String.valueOf(Salarie.idSalarie).toString());
 
         //valeur de l'id pour les test
-      identifiant.setText(String.valueOf(1).toString());
-       lesSocietes();
-       
+        identifiant.setText(String.valueOf(1).toString());
+        //lesSocietes();
+        SalarieDao s = new SalarieDao();
+        s.lesSocietes(selectionNomSociete);
+
     }
 
     @FXML
     private void AjouterNoteRestaurant(ActionEvent event) {
-       //create
+        //create
         //convertir localDate en Date
         LocalDate localDate = selectionDate.getValue();
-         System.out.println("LocalDate = " + localDate);
+        System.out.println("LocalDate = " + localDate);
         Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         System.out.println("Date      = " + date);
         //date = date1.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         //System.out.println("LocalDate = " + date);
         Double montant = Double.parseDouble(textMontant.getText().toString());
         String nom = selectionNomSociete.getItems().toString();
-        
-        
-      
-        
-        DejeunerDAO.creerDejeuner(date, montant,nom);
+        int id =  Integer.parseInt(identifiant.getText().toString());
+
+        DejeunerDAO.creerDejeuner(date, montant, nom, id);
         // faire des test pour afficher
-        System.out.println("le nom :"+nom+" "+"le montant :"+" "+montant+" "+"date :"+date);
-       
+        System.out.println("le nom :" + nom + " " + "le montant :" + " " + montant + " " + "date :" + date+" "+"id :"+id);
+
     }
 
     @FXML
     private void creerNouveauClient(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getResource("AjouterClient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("AjouterClient.fxml"));
         TransitionView.ChargerScene(root, "AJOUTER UNE NOTE POUR UN DEJEUNER");
     }
 
-    public List<Client> lesSocietes() {
+   /* public List<Client> lesSocietes() {
 
         Connection.getConnexion();
         Session session = Connection.session;
@@ -118,5 +109,5 @@ public class AjouterDejeunerController implements Initializable {
 
         return resultat;
 
-    }
+    }*/
 }

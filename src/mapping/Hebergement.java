@@ -27,19 +27,19 @@ public class Hebergement implements java.io.Serializable {
     private double montant;
     private double montantAnnexesHeberg;
     private Date dateHeberg;
-    private Integer idClient;
+    private Integer idSalarie;
 
     public Hebergement() {
     }
 
-    public Hebergement(String cause, double montant, double montantAnnexesHeberg, Date dateHeberg, Integer idClient) {
+    public Hebergement(String cause, double montant, double montantAnnexesHeberg, Date dateHeberg, Integer idSalarie) {
         //this.distanceHerberg = distanceHerberg;
         //this.tempsHeberg = tempsHeberg;
         this.cause = cause;
         this.montant = montant;
         this.montantAnnexesHeberg = montantAnnexesHeberg;
         this.dateHeberg = dateHeberg;
-        this.idClient = idClient;
+        this.idSalarie = idSalarie;
     }
 
     @Id
@@ -106,13 +106,13 @@ public class Hebergement implements java.io.Serializable {
         this.dateHeberg = dateHeberg;
     }
 
-    @Column(name = "id_salarie", unique = true, nullable = false)
-    public Integer getIdClient() {
-        return idClient;
+    @Column(name = "id_salarie", nullable = false)
+    public Integer getIdSalarie() {
+        return idSalarie;
     }
 
-    public void setIdClient(Integer idClient) {
-        this.idClient = idClient;
+    public void setIdSalarie(Integer idSalarie) {
+        this.idSalarie = idSalarie;
     }
 
 }

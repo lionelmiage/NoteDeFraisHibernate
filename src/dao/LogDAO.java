@@ -5,13 +5,11 @@
  */
 package dao;
 
-import controller.LogController;
 import dao.connexion.Connection;
 import java.util.List;
+import mapping.Admin;
 import mapping.Salarie;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 /**
@@ -25,13 +23,13 @@ public class LogDAO {
         Session session = Connection.session;
         session.beginTransaction();
         try {
-            Query query = session.createQuery("Select sal from Salarie sal where sal.emailSalarie like :login and sal.mdpSalarie like :pass");
+            Query query = session.createQuery("Select adm from Admin adm where adm.emailAdmin like :login and adm.mdpAdmin like :pass");
             query.setParameter("login", email);
             query.setParameter("pass", motDePasse);
 
-            List<Salarie> resultat = query.list();
+            List<Admin> resultat = query.list();
             if (resultat.size() == 1) {
-                return resultat.get(0).getIdSalarie();
+                return resultat.get(0).getIdAdmin();
             }
             else{
                 return -1;

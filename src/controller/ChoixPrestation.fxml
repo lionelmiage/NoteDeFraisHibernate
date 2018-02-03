@@ -2,50 +2,103 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChoixPrestationController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="647.0" style="-fx-background-color: #648FD8;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChoixPrestationController">
    <children>
-      <Button fx:id="boutonDejeuner" layoutX="24.0" layoutY="128.0" mnemonicParsing="false" onAction="#AjouterDejeuner" prefHeight="27.0" prefWidth="119.0" text="DEJEUNER" />
-      <Button fx:id="boutonHergement" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" onAction="#ajouterHebergement" prefHeight="27.0" prefWidth="119.0" text="HEBERGEMENT" />
-      <Button fx:id="boutonAvance" layoutX="24.0" layoutY="293.0" mnemonicParsing="false" onAction="#AjouterAvance" prefHeight="27.0" prefWidth="119.0" text="AVANCE" />
-      <Button fx:id="boutonTaxi" layoutX="24.0" layoutY="251.0" mnemonicParsing="false" onAction="#ajouterFraisTaxi" prefHeight="27.0" prefWidth="119.0" text="TAXI" />
+      <Button fx:id="boutonDejeuner" layoutX="24.0" layoutY="128.0" mnemonicParsing="false" onAction="#AjouterDejeuner" prefHeight="27.0" prefWidth="119.0" text="DEJEUNER">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="boutonHergement" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" onAction="#ajouterHebergement" prefHeight="27.0" prefWidth="119.0" text="HEBERGEMENT">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="boutonAvance" layoutX="24.0" layoutY="293.0" mnemonicParsing="false" onAction="#AjouterAvance" prefHeight="27.0" prefWidth="119.0" text="AVANCE">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="boutonTaxi" layoutX="24.0" layoutY="251.0" mnemonicParsing="false" onAction="#ajouterFraisTaxi" prefHeight="27.0" prefWidth="119.0" text="TAXI">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
       <Button fx:id="boutonFraisKM" layoutX="24.0" layoutY="210.0" mnemonicParsing="false" onAction="#ajouterFraisKM" prefHeight="27.0" prefWidth="119.0" text="FRAIS KILOMETRIQUE">
          <font>
             <Font size="10.0" />
-         </font></Button>
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
       <Label fx:id="titreFenetre" layoutX="243.0" layoutY="14.0" prefHeight="23.0" prefWidth="275.0" text="TABLEAU DE BORD" textAlignment="CENTER">
          <font>
             <Font size="26.0" />
-         </font></Label>
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Label>
       <Label layoutX="24.0" layoutY="17.0" text="ID :" />
-      <Label fx:id="identifiant" layoutX="51.0" layoutY="17.0" prefHeight="17.0" prefWidth="146.0" style="-fx-background-color: #d1f1df#d1f1df#d1f1df#d1f1df;" />
-      <Label fx:id="nombreRepas" layoutX="418.0" layoutY="296.0" prefHeight="17.0" prefWidth="82.0" style="-fx-background-color: #d1f1df#d1f1df;" />
-      <Label layoutX="43.0" layoutY="75.0" prefHeight="38.0" prefWidth="82.0" text="Menu">
+      <Label fx:id="identifiant" layoutX="51.0" layoutY="17.0" prefHeight="17.0" prefWidth="146.0" style="-fx-background-color: #d1f1df#d1f1df#d1f1df#d1f1df;">
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label layoutX="14.0" layoutY="75.0" prefHeight="38.0" prefWidth="171.0" text="Nouvelle note" textAlignment="CENTER">
          <font>
-            <Font size="31.0" />
+            <Font size="21.0" />
          </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Label>
-      <Label layoutX="204.0" layoutY="298.0" prefHeight="17.0" prefWidth="198.0" text="nombre de déjeuners ce mois" />
-      <TableView fx:id="tableau" layoutX="197.0" layoutY="128.0" prefHeight="164.0" prefWidth="387.0">
-         <columns>
-            <TableColumn fx:id="colonneIdNote" prefWidth="152.0" text="id note" />
-            <TableColumn fx:id="colonneDate" prefWidth="102.0" text="Date" />
-            <TableColumn fx:id="colonneMontant" prefWidth="103.0" text="Montant" />
-         </columns>
-      </TableView>
-      <Label layoutX="289.0" layoutY="86.0" prefHeight="37.0" prefWidth="254.0" text="Liste des notes">
+      <Label layoutX="206.0" layoutY="76.0" prefHeight="37.0" prefWidth="393.0" text="Mettre à jour les informations">
          <font>
-            <Font size="30.0" />
+            <Font size="18.0" />
          </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Label>
-      <Label layoutX="204.0" layoutY="330.0" prefHeight="17.0" prefWidth="198.0" text="montant des frais" />
-      <Label fx:id="montantTotalFrais" layoutX="418.0" layoutY="330.0" prefHeight="0.0" prefWidth="82.0" style="-fx-background-color: #d1f1df#d1f1df;" />
-      <Label layoutX="204.0" layoutY="363.0" prefHeight="17.0" prefWidth="198.0" text="demande d'avance en attente" />
-      <Label fx:id="nombreDemandeAvance" layoutX="418.0" layoutY="363.0" prefHeight="0.0" prefWidth="82.0" style="-fx-background-color: #d1f1df#d1f1df;" />
-      <Button fx:id="boutonCreerClient" layoutX="24.0" layoutY="339.0" mnemonicParsing="false" onAction="#nouveauClient" prefHeight="27.0" prefWidth="119.0" text="CLIENT" />
+      <Button fx:id="boutonCreerClient" layoutX="24.0" layoutY="339.0" mnemonicParsing="false" onAction="#nouveauClient" prefHeight="27.0" prefWidth="119.0" text="CLIENT">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="bGererClients" layoutX="162.0" layoutY="126.0" mnemonicParsing="false" onAction="#gererLesClients" prefHeight="58.0" prefWidth="138.0" text="Gestion des clients">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="bAvance" layoutX="317.0" layoutY="200.0" mnemonicParsing="false" onAction="#gererDemandeAvance" prefHeight="58.0" prefWidth="171.0" text="Gestion avance">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="bGestionTaxi" layoutX="162.0" layoutY="200.0" mnemonicParsing="false" onAction="#gererNoteTaxi" prefHeight="58.0" prefWidth="138.0" text="Gestion note taxi">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="bGestionHeberg" layoutX="317.0" layoutY="126.0" mnemonicParsing="false" onAction="#gererNoteHeberg" prefHeight="58.0" prefWidth="171.0" text="Gestion note hebergement">
+         <font>
+            <Font size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="bGestionDej" layoutX="495.0" layoutY="200.0" mnemonicParsing="false" onAction="#gererNoteDejeuner" prefHeight="58.0" prefWidth="138.0" text="Gestion déjeuners">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="bGestionFraisKM" layoutX="495.0" layoutY="126.0" mnemonicParsing="false" onAction="#gererNoteKM" prefHeight="58.0" prefWidth="138.0" text="Gestion frais KM">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
    </children>
+   <effect>
+      <Reflection />
+   </effect>
 </AnchorPane>

@@ -18,5 +18,8 @@
         <property name="NomSociete" type="string">
             <column name="nom_societe" length="50" not-null="true" />
         </property>
+        <property name="idSalarie" type="int">
+            <column name="id_salarie" not-null="true" />
+        </property>
     </class>
 </hibernate-mapping>

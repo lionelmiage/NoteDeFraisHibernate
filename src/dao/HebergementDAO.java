@@ -16,7 +16,7 @@ import org.hibernate.Session;
  * @author Lionel
  */
 public class HebergementDAO {
-    public static void creerNoteHebergement(String cause,double montant,double montantAnnexesHeberg, Date dateHeberg,Integer idClient) {
+    public static void creerNoteHebergement(String cause,double montant,double montantAnnexesHeberg, Date dateHeberg,Integer idSalarie) {
 
         Connection.getConnexion();
         Session session = Connection.session;
@@ -28,7 +28,7 @@ public class HebergementDAO {
             h.setMontant(montant);
             h.setMontantAnnexesHeberg(montantAnnexesHeberg);
             h.setDateHeberg(dateHeberg);
-            h.setIdClient(idClient);
+            h.setIdSalarie(idSalarie);
 
             session.save(h);
             session.close();

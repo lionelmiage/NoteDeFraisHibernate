@@ -47,21 +47,19 @@ public class ChoixPrestationController extends GestionNoteFraisDAO implements In
     @FXML
     private Label identifiant;
     @FXML
-    private Label nombreRepas;
-    @FXML
-    private TableView<?> tableau;
-    @FXML
-    private TableColumn<?, ?> colonneIdNote;
-    @FXML
-    private TableColumn<?, ?> colonneDate;
-    @FXML
-    private TableColumn<?, ?> colonneMontant;
-    @FXML
-    private Label montantTotalFrais;
-    @FXML
-    private Label nombreDemandeAvance;
-    @FXML
     private Button boutonCreerClient;
+    @FXML
+    private Button bGererClients;
+    @FXML
+    private Button bAvance;
+    @FXML
+    private Button bGestionTaxi;
+    @FXML
+    private Button bGestionHeberg;
+    @FXML
+    private Button bGestionDej;
+    @FXML
+    private Button bGestionFraisKM;
 
     /**
      * Initializes the controller class.
@@ -115,6 +113,42 @@ public class ChoixPrestationController extends GestionNoteFraisDAO implements In
     private void nouveauClient(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("AjouterClient.fxml"));
         TransitionView.ChargerScene(root, "AJOUTER UNE NOTE POUR LE TAXI");
+    }
+
+    @FXML
+    private void gererLesClients(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GestionClient.fxml"));
+        TransitionView.ChargerScene(root, "MODIFIER LES INFORMATIONS DES CLIENTS");
+    }
+
+    @FXML
+    private void gererDemandeAvance(ActionEvent event) {
+        //Parent root = FXMLLoader.load(getClass().getResource(""));
+         //TransitionView.ChargerScene(root, "");
+    }
+
+    @FXML
+    private void gererNoteTaxi(ActionEvent event) {
+        //Parent root = FXMLLoader.load(getClass().getResource(""));
+        // TransitionView.ChargerScene(root, "");
+    }
+
+    @FXML
+    private void gererNoteHeberg(ActionEvent event) {
+       // Parent root = FXMLLoader.load(getClass().getResource(""));
+         //TransitionView.ChargerScene(root, "");
+    }
+
+    @FXML
+    private void gererNoteDejeuner(ActionEvent event) {
+       // Parent root = FXMLLoader.load(getClass().getResource(""));
+         //TransitionView.ChargerScene(root, "");
+    }
+
+    @FXML
+    private void gererNoteKM(ActionEvent event) {
+        //Parent root = FXMLLoader.load(getClass().getResource(""));
+        // TransitionView.ChargerScene(root, "");
     }
 
 }

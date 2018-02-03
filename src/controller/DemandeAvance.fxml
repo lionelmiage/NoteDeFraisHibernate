@@ -2,25 +2,41 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="controller.DemandeAvanceController">
+<AnchorPane id="AnchorPane" prefHeight="273.0" prefWidth="532.0" style="-fx-background-color: #648FD8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DemandeAvanceController">
    <children>
-      <Label layoutX="177.0" layoutY="48.0" text="DEMANDE D'AVANCE">
+      <Label layoutX="243.0" layoutY="13.0" text="DEMANDE D'AVANCE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Label layoutX="23.0" layoutY="22.0" text="ID :" />
-      <Label fx:id="indentifiant" layoutX="53.0" layoutY="22.0" prefHeight="17.0" prefWidth="145.0" style="-fx-background-color: #d1f1df#d1f1df#d1f1df#d1f1df;" />
-      <Label layoutX="34.0" layoutY="105.0" prefHeight="17.0" prefWidth="223.0" text="Sélectionnez votre type d'avance" />
-      <ChoiceBox fx:id="selectionTypeAvance" layoutX="274.0" layoutY="100.0" prefHeight="27.0" prefWidth="231.0" />
-      <Label layoutX="34.0" layoutY="174.0" prefHeight="17.0" prefWidth="71.0" text="Montant" />
-      <TextField fx:id="montantAvance" layoutX="184.0" layoutY="169.0" prefHeight="27.0" prefWidth="326.0" promptText="Montant avance" />
-      <Button fx:id="envoyerDemande" layoutX="76.0" layoutY="287.0" mnemonicParsing="false" onAction="#envoyerDemandeAvance" prefHeight="27.0" prefWidth="449.0" text="Envoyer la demande" />
+      <Label fx:id="identifiant" layoutX="52.0" layoutY="22.0" prefHeight="17.0" prefWidth="145.0" style="-fx-background-color: #d1f1df#d1f1df#d1f1df#d1f1df;" />
+      <Label layoutX="52.0" layoutY="128.0" prefHeight="17.0" prefWidth="223.0" text="Sélectionnez votre type d'avance" />
+      <ChoiceBox fx:id="selectionTypeAvance" layoutX="274.0" layoutY="123.0" prefHeight="27.0" prefWidth="126.0">
+         <effect>
+            <InnerShadow />
+         </effect></ChoiceBox>
+      <Label layoutX="163.0" layoutY="174.0" prefHeight="17.0" prefWidth="71.0" text="Montant" />
+      <TextField fx:id="montantAvance" layoutX="277.0" layoutY="169.0" prefHeight="27.0" prefWidth="126.0" promptText="Montant avance" />
+      <Button fx:id="envoyerDemande" layoutX="274.0" layoutY="215.0" mnemonicParsing="false" onAction="#envoyerDemandeAvance" prefHeight="27.0" prefWidth="126.0" text="Envoyer la demande">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <DatePicker fx:id="dateDemande" layoutX="274.0" layoutY="79.0" prefHeight="25.0" prefWidth="126.0">
+         <effect>
+            <InnerShadow />
+         </effect></DatePicker>
+      <Label layoutX="52.0" layoutY="83.0" text="Date de la demande" />
    </children>
+   <effect>
+      <Reflection />
+   </effect>
 </AnchorPane>

@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterFraisKMController">
+<AnchorPane id="AnchorPane" prefHeight="397.0" prefWidth="600.0" style="-fx-background-color: #9CAFE3;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterFraisKMController">
    <children>
       <Label layoutX="99.0" layoutY="46.0" text="AJOUTER UNE NOTE DE FRAIS KILOMETRIQUE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="105.0" text="Lieu de départ" />
-      <Label layoutX="33.0" layoutY="150.0" text="Lieu d'arrivée" />
-      <Label layoutX="34.0" layoutY="192.0" text="Kilomètres parcourus" />
-      <Label layoutX="33.0" layoutY="241.0" text="Nom client/entreprise" />
-      <TextField fx:id="texteDepart" layoutX="176.0" layoutY="100.0" prefHeight="27.0" prefWidth="391.0" promptText="départ" />
-      <TextField fx:id="texteArrivee" layoutX="174.0" layoutY="145.0" prefHeight="27.0" prefWidth="391.0" promptText="arrivée" />
-      <TextField fx:id="kmParcourus" layoutX="176.0" layoutY="187.0" prefHeight="27.0" prefWidth="391.0" promptText="kilometres parcourues" />
-      <TextField fx:id="nomClientEntreprise" layoutX="176.0" layoutY="236.0" prefHeight="27.0" prefWidth="391.0" promptText="Nom client/entrepriseNom client/entreprise" />
-      <Button fx:id="AjouterNote" layoutX="21.0" layoutY="311.0" mnemonicParsing="false" onAction="#AjouterNoteKM" prefHeight="27.0" prefWidth="539.0" text="Ajouter la note" />
+      <Label fx:id="date" layoutX="13.0" layoutY="92.0" text="Date" />
+      <Label layoutX="16.0" layoutY="172.0" text="Lieu d'arrivée" />
+      <Label layoutX="18.0" layoutY="215.0" text="Kilomètres parcourus" />
+      <Label layoutX="16.0" layoutY="263.0" text="Puissance du véhicule" />
+      <TextField fx:id="texteDepart" layoutX="176.0" layoutY="122.0" prefHeight="27.0" prefWidth="139.0" promptText="départ" />
+      <TextField fx:id="texteArrivee" layoutX="176.0" layoutY="167.0" prefHeight="27.0" prefWidth="139.0" promptText="arrivée" />
+      <TextField fx:id="kmParcourus" layoutX="176.0" layoutY="210.0" prefHeight="27.0" prefWidth="139.0" promptText="kilometres parcourues" />
+      <Button fx:id="AjouterNote" layoutX="346.0" layoutY="122.0" mnemonicParsing="false" onAction="#AjouterNoteKM" prefHeight="125.0" prefWidth="208.0" text="Ajouter la note">
+         <effect>
+            <InnerShadow color="#171717" />
+         </effect></Button>
       <Label layoutX="16.0" layoutY="14.0" text="ID :" />
-      <Label fx:id="identifiant" layoutX="51.0" layoutY="14.0" prefHeight="17.0" prefWidth="131.0" style="-fx-background-color: #d1f1df#d1f1df;" />
+           <Label fx:id="identifiant" layoutX="51.0" layoutY="14.0" prefHeight="17.0" prefWidth="131.0" style="-fx-background-color: #d1f1df#d1f1df;" />
+           <Label layoutX="42.0" layoutY="321.0" text="Creer un nouveau Client">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="selectionDate" layoutX="176.0" layoutY="87.0" prefHeight="27.0" prefWidth="139.0" promptText="Entrez la date" />
+      <Button fx:id="creerNouveauClient" layoutX="28.0" layoutY="356.0" mnemonicParsing="false" onAction="#creerNouveauClient" prefHeight="27.0" prefWidth="228.0" text="Nouveau Client">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label layoutX="13.0" layoutY="127.0" text="Lieu de départ" />
+      <TextField fx:id="puissance" layoutX="176.0" layoutY="258.0" prefHeight="27.0" prefWidth="139.0" promptText="puissance véhicule" />
    </children>
+   <effect>
+      <Reflection />
+   </effect>
+
 </AnchorPane>

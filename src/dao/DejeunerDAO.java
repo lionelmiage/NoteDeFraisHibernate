@@ -16,7 +16,7 @@ import org.hibernate.Session;
  */
 public class DejeunerDAO {
 
-    public static void creerDejeuner(Date date, double montant, String nomSociete) {
+    public static void creerDejeuner(Date date, double montant, String nomSociete,int idSalarie) {
 
         Connection.getConnexion();
         Session session = Connection.session;
@@ -27,6 +27,7 @@ public class DejeunerDAO {
             r.setDateRest(date);
             r.setMontantRest(montant);
             r.setNomSociete(nomSociete);
+            r.setIdSalarie(idSalarie);
 
             session.save(r);
             session.close();

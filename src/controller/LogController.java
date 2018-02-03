@@ -73,14 +73,17 @@ public class LogController extends GestionNoteFraisDAO implements Initializable 
 //fonction pour se connecter à l'application
     @FXML
     private void valider(ActionEvent event) throws IOException {
-        int exist = LogDAO.login(texteEmail.getText().toString(), texteMdp.getText().toString());
 
+        int exist = LogDAO.login(texteEmail.getText().toString(), texteMdp.getText().toString());
         if (exist == 1) {
             Parent root = FXMLLoader.load(getClass().getResource("ChoixPrestation.fxml"));
             TransitionView.ChargerScene(root, "TABLEAU DE BORD - AJOUTER UNE NOTE");
             messageConnection.setText("Vous êtes connecté");
+            //fermer la fenetre en appuyant sur le bouton valider
+            Stage stage = (Stage) boutonValider.getScene().getWindow();
+            stage.close();
 
-        } else{
+        } else {
             messageConnection.setText("mdp ou email incorrect");
         }
     }
@@ -93,7 +96,5 @@ public class LogController extends GestionNoteFraisDAO implements Initializable 
         TransitionView.ChargerScene(root, "CREER UN COMPTE");
 
     }
-    
-    
 
 }

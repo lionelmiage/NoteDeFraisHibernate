@@ -8,6 +8,9 @@
             <column name="id_taxi" />
             <generator class="identity" />
         </id>
+        <property name="date" type="date">
+            <column name="date_taxi" length="10" not-null="true" />
+        </property>
         <property name="departTaxi" type="string">
             <column name="depart_taxi" length="50" not-null="true" />
         </property>
@@ -20,8 +23,8 @@
         <property name="nomSociete" type="string">
             <column name="nom_societe" length="50" not-null="true" />
         </property>
-        <property name="idClient" type="int">
-            <column name="id_client" not-null="true" />
+        <property name="idSalarie" type="int">
+            <column name="id_salarie" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>
