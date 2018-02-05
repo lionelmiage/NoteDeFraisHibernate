@@ -7,16 +7,12 @@ package controller;
 
 import dao.DejeunerDAO;
 import dao.SalarieDao;
-import dao.connexion.Connection;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
-import java.util.List;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,8 +24,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import mapping.Client;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
 import vues.TransitionView;
 
 /**

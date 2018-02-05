@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="600.0" style="-fx-background-color: #648FD8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="controller.GestionClientController">
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="600.0" style="-fx-background-color: #648FD8;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionClientController">
     <children>
       <Label fx:id="titreFenetre" layoutX="243.0" layoutY="7.0" prefHeight="38.0" prefWidth="331.0" text="GESTION DES CLIENTS" textAlignment="CENTER">
          <font>
@@ -40,8 +40,8 @@
       <TableView fx:id="tableau" layoutX="14.0" layoutY="99.0" prefHeight="193.0" prefWidth="570.0">
          <columns>
             <TableColumn fx:id="colonneIdNote" prefWidth="112.0" text="id note" />
-            <TableColumn fx:id="colonneDate" prefWidth="142.0" text="Nom" />
-            <TableColumn fx:id="colonneMontant" prefWidth="197.0" text="Adresse" />
+            <TableColumn fx:id="colonneNom" prefWidth="142.0" text="Nom" />
+            <TableColumn fx:id="colonneAdresse" prefWidth="197.0" text="Adresse" />
             <TableColumn fx:id="colonneEmail" prefWidth="118.0" text="Email" />
          </columns>
       </TableView>

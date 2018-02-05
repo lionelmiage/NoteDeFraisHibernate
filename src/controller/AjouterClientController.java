@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -48,6 +49,23 @@ public class AjouterClientController implements Initializable {
     @FXML
     private void creerClient(ActionEvent event) {
         ClientDAO.creerClient(texteNom.getText().toString(), texteAdresse.getText().toString(), texteEmail.getText().toString());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information importante");
+        alert.setHeaderText(null);
+        
+//Une propriété représentant le texte d'en-tête pour le volet de dialogue
+        alert.setContentText("Client créé avec succès");
+        alert.showAndWait();
+        
+        clearFields();
         
 }
+    
+    public void clearFields(){
+    texteNom.clear();
+    texteEmail.clear();
+    texteAdresse.clear();
+    
+    
+    }
 }

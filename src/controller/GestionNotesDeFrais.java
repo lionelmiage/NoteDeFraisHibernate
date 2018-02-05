@@ -21,10 +21,10 @@ public class GestionNotesDeFrais extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //page officielle de connection
-        Parent root = FXMLLoader.load(getClass().getResource("Log.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("Log.fxml"));
         
         //connection pour les tests
-        //Parent root = FXMLLoader.load(getClass().getResource("ChoixPrestation.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ChoixPrestation.fxml"));
         
         
         
