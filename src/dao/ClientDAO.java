@@ -73,7 +73,7 @@ public class ClientDAO {
         return resultat;
     }
 
-    public static void supprimer(int id) {
+    public static void supprimer() {
         Connection.getConnexion();
         Session session = Connection.session;
         session.beginTransaction();
@@ -82,7 +82,7 @@ public class ClientDAO {
             Client c = new Client();
                 c= (Client) session.get(Client.class, 1);
             
-                c.setIdClient(id);
+               // c.setIdClient(id);
                 session.delete(c);
                 session.close();
                 System.out.println("client supprimer");

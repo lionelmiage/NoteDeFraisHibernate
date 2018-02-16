@@ -97,14 +97,16 @@ public class GestionClientController implements Initializable {
         session.beginTransaction();
 
         try {
-            
-              Client c= new Client();
+            Client  c = tableau.getSelectionModel().getSelectedItem();
+             
                 
-                c.setIdClient(4);
+               
                 session.delete(c);
                 session.getTransaction().commit();
                 session.close();
+                
                 System.out.println("client supprimer");
+                
 
             //Contrôler les quatre champs sinon renvoyer un message d'erreur
         } catch (Exception e) {
